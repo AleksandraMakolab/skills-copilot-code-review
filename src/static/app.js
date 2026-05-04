@@ -1,11 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Announcement banner close button
   const announcementClose = document.querySelector(".announcement-close");
+  const announcementBanner = document.getElementById("announcement-banner");
   if (announcementClose) {
     announcementClose.addEventListener("click", () => {
-      document.getElementById("announcement-banner").classList.add("hidden");
+      announcementBanner.classList.add("hidden");
     });
   }
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && announcementBanner && !announcementBanner.classList.contains("hidden")) {
+      announcementBanner.classList.add("hidden");
+    }
+  });
 
   // DOM elements
   const activitiesList = document.getElementById("activities-list");
