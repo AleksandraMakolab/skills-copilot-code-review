@@ -39,6 +39,48 @@
   font-family: Arial, sans-serif;
 }
 
+/* Announcement Banner */
+.announcement-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--warning-light);
+  color: var(--text-primary);
+  border: 1px solid var(--warning);
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.announcement-banner.hidden {
+  display: none;
+}
+
+.announcement-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.announcement-text {
+  flex: 1;
+}
+
+.announcement-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  line-height: 1;
+  padding: 0 4px;
+  flex-shrink: 0;
+}
+
+.announcement-close:hover {
+  color: var(--text-primary);
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.4;

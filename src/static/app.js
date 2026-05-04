@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Announcement banner close button
+  const announcementClose = document.querySelector(".announcement-close");
+  if (announcementClose) {
+    announcementClose.addEventListener("click", () => {
+      document.getElementById("announcement-banner").classList.add("hidden");
+    });
+  }
+
   // DOM elements
   const activitiesList = document.getElementById("activities-list");
   const messageDiv = document.getElementById("message");
